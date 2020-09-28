@@ -26,3 +26,7 @@
 	path = CMEPS
 	url = https://github.com/ESCOMP/CMEPS.git
 	branch = master
+[submodule "CDEPS"]
+	path = CDEPS
+	url = https://github.com/ESCOMP/CDEPS.git
+	branch = master
