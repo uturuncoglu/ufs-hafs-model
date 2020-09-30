@@ -4,7 +4,7 @@
 	branch = feature/hafs_couplehycom
 [submodule "NEMS"]
 	path = NEMS
-	url = https://github.com/hafs-community/NEMS
+	url = https://github.com/uturuncoglu/NEMS.git
 	branch = feature/hafs_couplehycom
 [submodule "FMS"]
 	path = FMS
