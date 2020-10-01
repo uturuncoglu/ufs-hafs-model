@@ -5,7 +5,7 @@
 [submodule "NEMS"]
 	path = NEMS
 	url = https://github.com/uturuncoglu/NEMS.git
-	branch = feature/hafs_couplehycom
+	branch = feature/hafs_cdeps
 [submodule "FMS"]
 	path = FMS
         url = https://github.com/NOAA-GFDL/FMS
