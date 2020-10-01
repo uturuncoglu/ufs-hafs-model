@@ -74,6 +74,10 @@ if [[ "${MAKE_OPT}" == *"CMEPS=Y"* ]]; then
   COMPONENTS="CMEPS,$COMPONENTS"
 fi
 
+if [[ "${MAKE_OPT}" == *"CDEPS=Y"* ]]; then
+  COMPONENTS="CDEPS,$COMPONENTS"
+fi
+
 # Make variables:
 #   COMPONENTS = list of components to build
 #   BUILD_ENV = theia.intel, wcoss_dell_p3, etc.
