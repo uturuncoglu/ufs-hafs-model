@@ -44,7 +44,9 @@ module load z/1.2.6
 ##
 module use /apps/contrib/NCEPLIBS/lib/modulefiles 
 module load netcdfp/4.7.4 
-module load esmflocal/8.1.0.19bs
+#module load esmflocal/8.1.0.19bs
+setenv NCEPLIBS /apps/contrib/NCEPLIBS/lib
+setenv ESMFMKFILE /work/noaa/nems/tufuk/progs/esmf-8.1.0b24_patched/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk
 module load post-intel-sandybridge/8.0.5
 
 ###
