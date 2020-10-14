@@ -57,6 +57,8 @@ module load post-intel-sandybridge/8.0.5
 ## load cmake
 ##
 module load cmake/3.15.4
+module load pnetcdf/1.12.1
+setenv PNETCDF /apps/impi-2020.2/pnetcdf-1.12.1
 setenv CMAKE_C_COMPILER mpiicc
 setenv CMAKE_CXX_COMPILER mpiicpc
 setenv CMAKE_Fortran_COMPILER mpiifort

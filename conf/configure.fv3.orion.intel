@@ -58,11 +58,12 @@ ifneq ($(findstring netcdf/4,$(LOADEDMODULES)),)
 else
   NETCDF_LIB = -L$(NETCDF)/lib -lnetcdff -lnetcdf
 endif
+PNETCDF_LIB = -L$(PNETCDF)/lib -lpnetcdf
 
 FPPFLAGS := -fpp -Wp,-w $(INCLUDE)
 CFLAGS := $(INCLUDE)
 
-FFLAGS := $(INCLUDE) -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte
+FFLAGS := $(INCLUDE) -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -debug minimal
 
 CPPDEFS += -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP
 CPPDEFS += -DNEW_TAUCTMAX -DINTERNAL_FILE_NML
@@ -87,7 +88,7 @@ else
 FFLAGS += -i4 -real-size 64 -no-prec-div -no-prec-sqrt
 endif
 endif
-
+CFLAGS += -debug minimal
 ifeq ($(REPRO),Y)
 FFLAGS += -qno-opt-dynamic-align
 CFLAGS += -qno-opt-dynamic-align
@@ -132,7 +133,7 @@ CFLAGS_DEBUG = -O0 -g -ftrapuv -traceback
 FFLAGS_TEST = -O3 -debug minimal -fp-model source -qoverride-limits
 CFLAGS_TEST = -O2
 
-LDFLAGS :=
+LDFLAGS := -debug minimal
 LDFLAGS_OPENMP := -qopenmp
 LDFLAGS_VERBOSE := -Wl,-V,--verbose,-cref,-M
 
@@ -189,5 +190,5 @@ LDFLAGS += $(LIBS)
 ifdef InNemsMakefile
 FFLAGS += $(ESMF_INC)
 CPPFLAGS += -traditional
-EXTLIBS = $(NCEPLIBS) $(ESMF_LIB) $(LDFLAGS) $(NETCDF_LIB)
+EXTLIBS = $(NCEPLIBS) $(ESMF_LIB) $(LDFLAGS) $(NETCDF_LIB) $(PNETCDF_LIB)
 endif
