@@ -1,0 +1,12 @@
+export idm=1135
+export jdm=633
+export kdm=41
+export kkdm=41
+export ic=2346
+export jc=1518
+export ijgrid=1
+export gridlabelout=basin
+export gridlabelin=navy_0.08
+export RUNmodIDout=rtofs_hat10
+export RUNmodIDin=rtofs_glo
+export gridno=850
