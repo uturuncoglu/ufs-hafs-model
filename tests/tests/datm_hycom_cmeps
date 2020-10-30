@@ -9,7 +9,11 @@ export TEST_DESCR="Data atmosphere coupled with regional HYCOM"
 export CNTL_DIR="datm_hycom_cmeps"
 
 export LIST_FILES="ufs.hafs.cpl.hi.2019-08-29-03600.nc \
-                   ufs.hafs.cpl.hi.2019-08-30-03600.nc"
+                   ufs.hafs.cpl.hi.2019-08-30-03600.nc \
+                   ufs.hafs.cpl.hi.2019-08-31-03600.nc \
+                   ufs.hafs.cpl.hi.2019-09-01-03600.nc \
+                   ufs.hafs.cpl.hi.2019-09-02-03600.nc \
+                   ufs.hafs.cpl.hi.2019-09-03-03600.nc"
 
 export TASKS=240
 export TPN=40
