@@ -83,6 +83,14 @@ if [[ "${MAKE_OPT}" == *"CDEPS=Y"* ]]; then
   COMPONENTS="CDEPS,$COMPONENTS"
 fi
 
+if [[ "${MAKE_OPT}" == *"DATM=Y"* ]]; then
+  COMPONENTS="DATM,$COMPONENTS"
+fi
+
+if [[ "${MAKE_OPT}" == *"DOCN=Y"* ]]; then
+  COMPONENTS="DOCN,$COMPONENTS"
+fi
+
 # Make variables:
 #   COMPONENTS = list of components to build
 #   BUILD_ENV = theia.intel, wcoss_dell_p3, etc.
